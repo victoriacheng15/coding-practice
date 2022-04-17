@@ -10,6 +10,13 @@ Ex: Given the following strings...
 “civic”, return “civic”
 */
 
+/*
+    Psuedocode:
+    1. [...str] will grab all characters in str and spread these into an array
+    2. once we have the characters in an array we can reverse the array elements
+    3. then we can join all the elements together without a separator and this will reverse the string
+*/
+
 // Author: Abdul
 function reverseString(str) {
     return [...str].reverse().join("")
