@@ -21,14 +21,14 @@ Psuedocode:
 3. then we can join all the elements together without a separator and this will reverse the string
 */
 
-function reverseString(str) {
-    return [...str].reverse().join("")
-}
+// function reverseString(str) {
+//     return [...str].reverse().join("")
+// }
 
 // will log "Assertion failed" if test fails and nothing if test passes
-console.assert(reverseString("Cat") === "taC")
-console.assert(reverseString("The Daily Byte") === "etyB yliaD ehT")
-console.assert(reverseString("civic") === "civic")
+// console.assert(reverseString("Cat") === "taC")
+// console.assert(reverseString("The Daily Byte") === "etyB yliaD ehT")
+// console.assert(reverseString("civic") === "civic")
 
 // Author: Victoria
 
@@ -58,14 +58,4 @@ function reverseString(str) {
   
 module.exports = reverseString;
   
-// jest testing part
 
-const reverseString = require('./script');
-
-describe('reverse the string', () => {
-  test('check string', () => {
-    expect(reverseString('cat')).toBe('tac');
-    expect(reverseString('The Daily Byte')).toBe('etyB yliaD ehT');
-    expect(reverseString('civic')).toBe('civic');
-  });
-});

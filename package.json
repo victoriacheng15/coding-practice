@@ -1,0 +1,23 @@
+{
+  "name": "coding-practice",
+  "version": "1.0.0",
+  "description": "This repo contains daily byte challenges.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^27.5.1"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victoriacheng15/coding-practice.git"
+  },
+  "author": "Victoria and Abdul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victoriacheng15/coding-practice/issues"
+  },
+  "homepage": "https://github.com/victoriacheng15/coding-practice#readme"
+}
