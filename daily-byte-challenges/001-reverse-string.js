@@ -58,14 +58,20 @@ function reverseString(str) {
   
 module.exports = reverseString;
   
-// jest testing part
+// jest testing
 
 const reverseString = require('./script');
 
-describe('reverse the string', () => {
-  test('check string', () => {
+describe('check for reversed string', () => {
+  test('reverse 1 word', () => {
     expect(reverseString('cat')).toBe('tac');
+  });
+
+  test('reverse more than 1 word', () => {
     expect(reverseString('The Daily Byte')).toBe('etyB yliaD ehT');
+  });
+
+  test('reverse 1 word that is the same as before', () => {
     expect(reverseString('civic')).toBe('civic');
   });
 });
