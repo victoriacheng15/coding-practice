@@ -1,4 +1,5 @@
-/* 
+# Vaccum Cleaner Route
+
 This question is asked by Amazon. 
 
 Given a string representing the sequence of moves a robot vacuum makes, 
@@ -9,6 +10,43 @@ representing left, right, up, and down respectively.
 Ex: Given the following strings...
 
 "LR", return true
+
 "URURD", return false
+
 "RUULLDRD", return true
-*/
+
+---
+
+## Author: Abdul
+
+### Psuedocode:
+
+
+### Solution:
+
+```js
+// your solution
+```
+
+### Jest:
+
+```js
+// your test
+```
+
+---
+## Author: Victoria
+
+### Psuedocode:
+
+### Solution:
+
+```js
+// your solution
+```
+
+### Jest:
+
+```js
+// your test
+```
