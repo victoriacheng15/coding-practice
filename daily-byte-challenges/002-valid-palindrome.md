@@ -39,14 +39,41 @@ Ex: Given the following strings...
 
 ### Psuedocode:
 
+- set up regex for non-words \W
+- convert str to lower case
+- replace non-words to empty str
+- reverse the string with reverse() and join() functions
+- compare lowerCase and reversed 
+- return either true or false
+
 ### Solution:
 
 ```js
-// your solution
+function isPalindrome(str) {
+  const regex = /\W/g;
+  const LowerCase = str.toLowerCase().replace(regex, '');
+  const reversed = [...LowerCase].reverse().join('');
+  return LowerCase === reversed;
+}
+
+module.exports = isPalindrome;
 ```
 
 ### Jest:
 
 ```js
-// your test
+describe('check for a valid palindrome', () => {
+  it('should be true, and spelling is the same', () => {
+    expect(isPalindrome('level')).toBeTruthy();
+  });
+
+  it('should be false, spelling is not the same', () => {
+    expect(isPalindrome('algorithm')).toBeFalsy();
+  });
+
+  it('should not have any non-words', () => {
+    expect(isPalindrome('A man, a plan, a canal: Panama.')).toBeTruthy();
+  });
+});
+
 ```
