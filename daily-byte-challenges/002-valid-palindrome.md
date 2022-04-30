@@ -20,18 +20,50 @@ Ex: Given the following strings...
 ## Author: Abdul
 
 ### Psuedocode:
-
+- convert str to lowercase
+- remove all non-alphanumeric characters
+- check recursively if str is palindrome
+    - base case: if string is one character or two characters it is a palindrome
+    - recursive step: if first and last characters match AND the substring from 0 ... N-2 is a palindrome then the original string is a palindrome
 
 ### Solution:
 
 ```js
-// your solution
+function isPalindrome(str) {
+  str = str.toLowerCase()
+  str = str.replace(/[^A-Za-z0-9]/g, "")
+  return isPalindromeRecurse(str)
+}
+
+function isPalindromeRecurse(str) {
+  if (str.length <= 1) {
+      return true
+  }
+  let end = str.length - 1
+  return str[0] === str[end] && isPalindrome(str.substring(1, end))
+}
 ```
 
 ### Jest:
 
 ```js
 // your test
+describe('isPalindrome test suite', () => {
+  it('returns true for one-word palindrome', () => {
+    expect(isPalindrome('racecar')).toBeTruthy();
+  });
+
+  it('returns false for a one-word non-palindrome', () => {
+    expect(isPalindrome('palindrome')).toBeFalsy();
+  });
+
+  it('returns true for multiple word palindrome with punctuation', () => {
+    expect(isPalindrome('A man, a plan, a canal: Panama.')).toBeTruthy();
+  });
+  it('returns false for multiple word palindrome with punctuation', () => {
+    expect(isPalindrome('A man, a plan, a canal, a boat: Panama.')).toBeFalsy();
+  });
+});
 ```
 
 ---
