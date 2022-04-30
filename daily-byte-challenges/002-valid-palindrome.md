@@ -83,9 +83,9 @@ describe('isPalindrome test suite', () => {
 ```js
 function isPalindrome(str) {
   const regex = /\W/g;
-  const LowerCase = str.toLowerCase().replace(regex, '');
-  const reversed = [...LowerCase].reverse().join('');
-  return LowerCase === reversed;
+  const lowerCase = str.toLowerCase().replace(regex, '');
+  const reversed = [...lowerCase].reverse().join('');
+  return lowerCase === reversed;
 }
 
 module.exports = isPalindrome;
