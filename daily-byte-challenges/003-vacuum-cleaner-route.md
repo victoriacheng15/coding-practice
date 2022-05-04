@@ -20,18 +20,40 @@ Ex: Given the following strings...
 ## Author: Abdul
 
 ### Psuedocode:
-
+- loop over each character in `str`
+- increment or decrement `changeX` or `changeY` according to character
+- return `true` if both `changeX` and `changeY` are zero, false otherwise
 
 ### Solution:
 
 ```js
-// your solution
+function vaccumeCleanerRoute(str) {
+    let changeX = 0
+    let changeY = 0
+
+    for (let char of str) {
+        if (char === 'L') changeX--
+        else if (char === 'R') changeX++
+        else if (char === 'U') changeY++
+        else if (char === 'D') changeY--
+    }
+
+    return changeX === 0 && changeY === 0
+}
 ```
 
 ### Jest:
 
 ```js
-// your test
+describe('vaccuumCleanerRoute test suite', () => {
+  test('correctly returns true', () => {
+    expect(vaccumeCleanerRoute('UDLR')).toBeTruthy();
+  });
+
+  test('correctly returns false', () => {
+    expect(vaccumeCleanerRoute('UURR')).toBeFalsy();
+  });
+});
 ```
 
 ---
