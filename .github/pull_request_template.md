@@ -9,7 +9,7 @@
 <!-- Example: Closes #31 -->
 
 
-## Screenshots - if applicatable
+## Screenshots - if applicable
 
 <!-- Add all the screenshots which support your changes -->
 
