@@ -55,7 +55,7 @@ Ex: Given the following strings...
 ### Solution:
 
 ```js
-function correctCaptialization(str) {
+function correctCapitalization(str) {
   const convertCase = (string, getUpper = true) =>
     getUpper ? string.toUpperCase() : string.toLowerCase();
 
@@ -80,10 +80,10 @@ function correctCaptialization(str) {
 ```js
 describe('correct captilization', () => {
   it('should check if the string has correct captilization or not', () => {
-    expect(correctCaptialization('USA')).toBeTruthy();
-    expect(correctCaptialization('Calvin')).toBeTruthy();
-    expect(correctCaptialization('coding')).toBeTruthy();
-    expect(correctCaptialization('compUter')).toBeFalsy();
+    expect(correctCapitalization('USA')).toBeTruthy();
+    expect(correctCapitalization('Calvin')).toBeTruthy();
+    expect(correctCapitalization('coding')).toBeTruthy();
+    expect(correctCapitalization('compUter')).toBeFalsy();
   });
 });
 
