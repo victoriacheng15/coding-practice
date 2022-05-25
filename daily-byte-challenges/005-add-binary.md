@@ -40,14 +40,30 @@ Ex: Given the following binary strings...
 
 ### Psuedocode:
 
+- use parseInt() with 2 as the argument for radix 
+- add both of them
+- use toString(2) to convert it to binary
+
 ### Solution:
 
 ```js
-// your solution
+function addBinary(str1, str2) {
+  const conversion = (str) => parseInt(str, 2);
+  const addBoth = conversion(str1) + conversion(str2);
+  return addBoth.toString(2);
+}
+
 ```
 
 ### Jest:
 
 ```js
-// your test
+describe('correct captilization', () => {
+  it('should check if the string has correct captilization or not', () => {
+    expect(addBinary('100', '1')).toMatch('101');
+    expect(addBinary('11', '1')).toMatch('100');
+    expect(addBinary('1', '0')).toMatch('1');
+  });
+});
+
 ```
