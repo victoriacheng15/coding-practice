@@ -55,22 +55,18 @@ Ex: Given the following strings...
 ### Solution:
 
 ```js
-function correctCapitalization(str) {
-  const convertCase = (string, getUpper = true) =>
+const convertCase = (string, getUpper = true) =>
     getUpper ? string.toUpperCase() : string.toLowerCase();
 
+function correctCapitalization(str) {
   if (convertCase(str) === str || convertCase(str, false) === str) return true;
-
   if (convertCase(str[0]) === str[0]) {
     const condition =
-      str.slice(1) === convertCase(str.slice(1)) ||
-      str.slice(1) === convertCase(str.slice(1), false);
+      str[0] === convertCase(str[0]) || str[0] === convertCase(str[0], false);
 
-    if (condition) {
-      return true;
-    }
-    return false;
+    if (condition) return true;
   }
+
   return false;
 }
 ```
