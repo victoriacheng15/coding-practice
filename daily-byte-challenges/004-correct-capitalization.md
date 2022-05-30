@@ -84,14 +84,46 @@ describe('correct capitalization test suite', () => {
 
 ### Psuedocode:
 
+- set up a function to convert str to upper case or lower case based on the getUpper condition
+- compare original string with upper case and lower case string
+  - if condition met, return true
+  - if not true, continue
+- check to see if first letter is equal to original first letter
+  - if true
+    - check rest of letters with upper case and lower case string
+    - if conditon is met, return true
+    - if not, return false
+- lastly, if no match, return false
+
 ### Solution:
 
 ```js
-// your solution
+const convertCase = (string, getUpper = true) =>
+    getUpper ? string.toUpperCase() : string.toLowerCase();
+
+function correctCapitalization(str) {
+  if (convertCase(str) === str || convertCase(str, false) === str) return true;
+  if (convertCase(str[0]) === str[0]) {
+    const condition =
+      str[0] === convertCase(str[0]) || str[0] === convertCase(str[0], false);
+
+    if (condition) return true;
+  }
+
+  return false;
+}
 ```
 
 ### Jest:
 
 ```js
-// your test
+describe('correct captilization', () => {
+  it('should check if the string has correct captilization or not', () => {
+    expect(correctCapitalization('USA')).toBeTruthy();
+    expect(correctCapitalization('Calvin')).toBeTruthy();
+    expect(correctCapitalization('coding')).toBeTruthy();
+    expect(correctCapitalization('compUter')).toBeFalsy();
+  });
+});
+
 ```
