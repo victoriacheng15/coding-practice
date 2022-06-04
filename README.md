@@ -40,6 +40,13 @@ Once the solutions are added:
 | 21 | [Reverse List](./daily-byte-challenges/021-reverse-list.md) |
 | 22 | [Valid Characters](./daily-byte-challenges/022-validate-characters.md) |
 | 23 | [Compare Keystrokes](./daily-byte-challenges/023-compare-keystrokes.md) |
+| 24 | [Remove Adjacent Duplicates](./daily-byte-challenges/024-remove-adjacent-duplicates.md) |
+| 25 | [Greater Elements](./daily-byte-challenges/025-greater-elements.md) |
+| 26 | [Call Counter](./daily-byte-challenges/026-call-counter.md) |
+| 27 | [Moving Average](./daily-byte-challenges/027-moving-average.md) |
+| 28 | [Queue Stack](./daily-byte-challenges/028-queue-stack.md) |
+| 29 | [Final Value](./daily-byte-challenges/029-final-value.md) |
+| 30 | [Convert Binary Search Tree to Sorted Linked List](./daily-byte-challenges/030-convert-binary-search-tree-to-sorted-linked-list.md) |
 
 
 ## Extra benefits with this repo
