@@ -40,14 +40,40 @@ Ex: Given the following arrays...
 
 ### Psuedocode:
 
+- return empty string  if there is no parameters
+- set firstWord = strs[0]
+- loop through the all strs
+- compare each letter based on firstWord
+- if they are same letter, increase index by 1 each time
+- until the loop reaches first different letter or the shortest string
+- extract letters from the firstWord based on the index
+
 ### Solution:
 
 ```js
-// your solution
+function commonPrefix(strs) {
+  let index = 0;
+  const firstWord = strs[0];
+  const checkStr = (string) => firstWord[index] === string[index];
+  while (strs.every(checkStr)) {
+    index += 1;
+  }
+
+  return firstWord.slice(0, index);
+}
 ```
 
 ### Jest:
 
 ```js
-// your test
+describe('longest common prefix', () => {
+  it('should return the same letters from the array', () => {
+    expect(commonPrefix(['colorado', 'color', 'cold'])).toEqual('col');
+    expect(commonPrefix(['spot', 'spotty', 'spotted'])).toEqual('spot');
+  });
+
+  it('should return emtpy string', () => {
+    expect(commonPrefix(['a', 'b', 'c'])).toEqual('');
+  });
+});
 ```
