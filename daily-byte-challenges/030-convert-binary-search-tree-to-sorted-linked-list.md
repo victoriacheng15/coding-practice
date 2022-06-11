@@ -1,4 +1,4 @@
-# Queue STack
+# Convert Binary Search Tree to Sorted Linked List
 
 Given a binary search tree, rearrange the tree such that it forms a linked list where all its values are in ascending order.
 
