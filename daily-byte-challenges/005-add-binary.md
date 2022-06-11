@@ -21,18 +21,32 @@ Ex: Given the following binary strings...
 ## Author: Abdul
 
 ### Psuedocode:
-
+- convert each binary string input to decimal
+- add two decimals
+- convert sum to binary string
 
 ### Solution:
 
 ```js
-// your solution
+function addBinary(binaryA, binaryB) {
+    let decimalA = parseInt(binaryA, 2)
+    let decimalB = parseInt(binaryB, 2)
+
+    return (decimalA + decimalB).toString(2)
+}
 ```
 
 ### Jest:
 
 ```js
-// your test
+    describe('add binary strings', () => {
+        test('adds 100 and 1 correctly in binary', () => {
+            expect(addBinary("100", "1")).toBe("101");
+        });
+        test('adds 11 and 1 correctly in binary', () => {
+            expect(addBinary("1", "0")).toBe("1");
+        });
+    })
 ```
 
 ---
